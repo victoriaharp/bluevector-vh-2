@@ -1,0 +1,49 @@
+---
+layout: default
+heading: Nature's canvas unveiled. A gallery of wilderness through the lens of adventure. 
+image: /images/Greg-Photo-49.JPG
+collections-cards:
+  - photo_image: /images/sports/image-11.jpg
+    title: Sports
+    link: sports.html
+  - photo_image: /images/Greg-Photo-49.JPG
+    title: Night Shoots
+    link: night-shoots.html
+  - photo_image: /images/IMG_0511.jpg
+    title: Product Photos
+    link: product-photos.html
+  - photo_image: /images/portraits-pets/image-30.jpg
+    title: Portraits - Pets
+    link: portraits-pets.html
+  - photo_image: /images/Greg-Photo-72.JPG
+    title: Portraits - Humans
+    link: portraits-humans.html
+  - photo_image: /images/landscapes-nature/image-51.jpg
+    title: Landscapes - Nature
+    link: landscapes-nature.html
+seo:
+    title: Greg English Photography | Gallery
+    description:
+    keywords:
+    social_image: /images/greg-205.jpg
+    hide-from-google: false
+---
+
+{% include hero-banner.html %}
+
+<h2 class="uppercase text-3xl md:text-5xl mb-5p text-center">Collections</h2>
+
+<section class="grid grid-cols-3 gap-5 px-10p mb-10p justify-center">
+    
+    {% for item in page.collections-cards %}
+
+    <a href="/gallery/{{item.link}}" class="bg-white p-5 border-1 border-dark-grey override">
+        <img src="{{ item.photo_image }}" alt="" class="aspect-square object-cover object-center pb-5p">
+        <h3 class="py-5p font-sans uppercase font-bold text-dark-grey" >{{ item.title }}</h3>
+    </a>
+
+    {% endfor %}
+
+
+</section>
+
